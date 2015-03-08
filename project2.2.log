@@ -1,0 +1,51 @@
+CPLEX 12.6.0.1: mipdisplay=2
+MIP Presolve eliminated 14 rows and 23 columns.
+MIP Presolve modified 24 coefficients.
+Reduced MIP has 9 rows, 15 columns, and 36 nonzeros.
+Reduced MIP has 15 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Found incumbent of value 2.000000 after 0.00 sec. (0.18 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+Reduced MIP has 9 rows, 15 columns, and 36 nonzeros.
+Reduced MIP has 15 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Probing time = 0.00 sec. (0.01 ticks)
+Clique table members: 6.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 4 threads.
+Root relaxation solution time = 0.00 sec. (0.01 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            2.0000       -3.0000        2  250.00%
+*     0+    0                            1.0000       -3.0000        2  400.00%
+*     0     0      integral     0        0.0000        0.0000        2    0.00%
+Elapsed time = 0.00 sec. (0.25 ticks, tree = 0.00 MB)
+
+Root node processing (before b&c):
+  Real time             =    0.00 sec. (0.25 ticks)
+Parallel b&c, 4 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.00 sec. (0.25 ticks)
+CPLEX 12.6.0.1: optimal integer solution; objective 0
+2 MIP simplex iterations
+0 branch-and-bound nodes
+x [*,*]
+:      1   2   3    :=
+AA01   0   1   0
+FE03   0   1   0
+FE04   0   0   1
+IE12   1   0   0
+IE23   1   0   0
+IE33   0   0   1
+MA01   0   1   0
+MA02   0   0   1
+ME25   1   0   0
+ME33   1   0   0
+PH03   0   1   0
+PH04   0   0   1
+;
+

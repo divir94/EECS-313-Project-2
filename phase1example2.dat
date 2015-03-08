@@ -1,0 +1,38 @@
+param NumQuarters := 3;
+
+param MaxClassesPerQuarter := 4;
+
+# The following syntax allows you to specify the elements of the set CLASSES
+# at the same time as you give values for the hours parameter.
+#
+param:
+  CLASSES : hours :=
+    FE03    10.0
+    MA01    22.5 
+    MA02     7.0
+    FE04    15.0
+    PH03     5.5
+    PH04     9.0
+    IE12    22.0
+    ME25    19.0
+    ME33     7.5
+    IE23     5.5
+    IE33     9.5
+    AA01     9.5 ;
+
+# Alternatively, you could also use:
+#
+# set CLASSES := FE03 MA01 ....
+# param hours :=
+#   FE03    10.0
+#   MA01    22.5 ...
+#
+# but the above formulation is shorter
+
+set PREREQS := 
+  (MA01, MA02)
+  (FE03, FE04)
+  (AA01, FE04)
+  (PH03, PH04)
+  (PH03, IE33)
+  (ME25, AA01) ;

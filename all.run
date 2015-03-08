@@ -1,0 +1,46 @@
+# Set options
+
+option solver './cplex';
+
+# The following option shows some output from the branch-and-bound search
+option cplex_options 'mipdisplay=2';
+
+#########################################################################
+
+# Solve example 2 from Phase 1 with first objective
+reset;
+option log_file 'project2.2.log';
+model schedule_obj2.mod
+data phase1example2.dat
+solve;
+
+# Make sure you display your solution!
+# Adapt the following according to your variable definition.
+display x;
+option log_file '';
+
+# HINT (feel free to ignore):
+# Just displaying all values of x might be too much.  You can use something
+# like the following (of course, you need to adapt it to make sense)
+# param tot;
+# for {k in QUARTERS} {
+#    printf "Quarter %2i:", k;
+#    let tot := 0;
+#    for {i in CLASSES} {
+#       if x[i] > 0.5 then {
+#         printf "%6s (%6.2f) |", i, hours[i];
+#         let tot := tot + hours[i];
+#       }
+#    }
+#    printf " Tot: %6.2f\n", tot;
+# }
+
+
+#########################################################################
+
+# Solve a random example (see .mod file for details)
+# reset;
+# model schedule_random_obj1.mod
+# solve;
+# display x;
+
